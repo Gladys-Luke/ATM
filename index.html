@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ATM Operation</title>
+  </head>
+  <body>
+    <script>
+      var name = prompt("Enter your name:");
+      var pin = prompt("Enter your PIN:");
+
+      if (pin === "1234") {
+        var choice = prompt(
+          "Welcome, " +
+            name +
+            "! What would you like to do?\n1. Withdrawal\n2. Deposit"
+        );
+
+        if (choice === "1") {
+          var amount = parseFloat(prompt("Enter the amount to withdraw:"));
+          alert("Withdrawal successful. You withdrew: $" + amount.toFixed(2));
+        } else if (choice === "2") {
+          var amount = parseFloat(prompt("Enter the amount to deposit:"));
+          alert("Deposit successful. You deposited: $" + amount.toFixed(2));
+        } else {
+          alert("Invalid choice.");
+        }
+      } else {
+        alert("Invalid PIN. Please try again.");
+      }
+
+      var age = 15;
+
+      if (age >= 18) {
+        console.log("You are an adult.");
+      } else {
+        console.log("You are not an adult yet.");
+      }
+    </script>
+  </body>
+</html>
